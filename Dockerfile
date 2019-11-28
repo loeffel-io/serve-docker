@@ -6,6 +6,7 @@ RUN apt-get update && \
     apt-get clean && apt-get --yes --quiet autoremove --purge
 
 COPY ./serve /home/serve
+RUN chmod +x /home/serve
 
 WORKDIR "/home"
 CMD TZ=${TZ} serve
