@@ -8,4 +8,4 @@ RUN apt-get update && \
 COPY ./serve /home/serve
 
 WORKDIR "/home"
-CMD TZ=${TZ} ./serve
+CMD TZ=${TZ} serve
