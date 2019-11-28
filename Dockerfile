@@ -9,4 +9,4 @@ COPY ./serve /home/serve
 RUN chmod +x /home/serve
 
 WORKDIR "/home"
-CMD TZ=${TZ} serve
+CMD TZ=${TZ} ./serve
