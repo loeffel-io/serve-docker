@@ -5,8 +5,8 @@ RUN apt-get update && \
         apt-transport-https bash-completion ca-certificates curl && \
     apt-get clean && apt-get --yes --quiet autoremove --purge
 
-COPY ./serve /home/serve
-RUN chmod +x /home/serve
+COPY serve-server /home/serve-server
+RUN chmod +x /home/serve-server
 
 WORKDIR "/home"
-CMD TZ=${TZ} ./serve
+CMD TZ=${TZ} ./serve-server
